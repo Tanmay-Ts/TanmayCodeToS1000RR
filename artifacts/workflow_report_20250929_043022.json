@@ -1,0 +1,39 @@
+{
+  "run_id": "20250929_043022",
+  "configuration": {
+    "planner": {
+      "model": "gemini-1.5-pro",
+      "temperature": 0.8,
+      "max_tokens": 4000,
+      "creativity_level": "high",
+      "max_test_cases": 10
+    },
+    "ranker": {
+      "algorithm": "weighted_scoring",
+      "criteria_weights": {
+        "complexity": 0.25,
+        "coverage": 0.3,
+        "uniqueness": 0.2,
+        "priority": 0.15,
+        "feasibility": 0.1
+      }
+    },
+    "executor": {
+      "headless": false,
+      "slow_mo": 200,
+      "use_real_game": false,
+      "timeout": 30000
+    },
+    "analyzer": {
+      "detailed_analysis": true,
+      "generate_recommendations": true,
+      "include_performance_metrics": true
+    }
+  },
+  "started_at": "2025-09-29T04:30:22.814660",
+  "phases": {},
+  "completed_at": "2025-09-29T04:30:22.824877",
+  "total_duration": 0.03298640251159668,
+  "status": "failed",
+  "error": "ProductionPlannerAgent.generate_test_cases() got an unexpected keyword argument 'count'"
+}

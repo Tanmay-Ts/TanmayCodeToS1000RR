@@ -1,0 +1,278 @@
+{
+  "run_id": "20250929_051804",
+  "timestamp": "2025-09-29T05:18:04.342404",
+  "config": {
+    "num_test_cases": 3,
+    "game_type": "puzzle game",
+    "complexity_levels": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "scenarios": [
+      "positive",
+      "negative",
+      "edge_case"
+    ],
+    "platform": "web browser",
+    "planner": {
+      "provider": "gemini",
+      "model_name": "gemini-1.5-pro",
+      "temperature": 0.8,
+      "max_tokens": 4000
+    },
+    "executor": {
+      "browser": "chromium",
+      "headless": false,
+      "timeout": 30000,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    "analyzer": {
+      "metrics": [
+        "performance",
+        "accuracy",
+        "coverage"
+      ],
+      "thresholds": {
+        "success_rate": 0.8,
+        "avg_execution_time": 10
+      }
+    },
+    "ranker": {
+      "criteria": [
+        "complexity",
+        "coverage",
+        "priority"
+      ],
+      "weights": {
+        "complexity": 0.4,
+        "coverage": 0.4,
+        "priority": 0.2
+      }
+    }
+  },
+  "results": {
+    "test_cases": [
+      {
+        "id": "fallback_001",
+        "description": "Fallback puzzle game test case 1",
+        "complexity_level": "medium",
+        "complexity_score": 5.0,
+        "input_data": {
+          "level": 1,
+          "score": 0,
+          "moves_left": 10,
+          "board_state": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "execution_steps": [
+          "Initialize test case 1",
+          "Execute player actions",
+          "Validate results",
+          "Clean up"
+        ],
+        "expected_results": {
+          "outcome": "SUCCESS",
+          "validations": [
+            "Game state correct",
+            "Score updated"
+          ]
+        },
+        "scenario_type": "positive",
+        "tags": [
+          "fallback",
+          "puzzle game"
+        ],
+        "generated_by": "fallback",
+        "timestamp": "2025-09-29T05:19:07.317204"
+      },
+      {
+        "id": "fallback_002",
+        "description": "Fallback puzzle game test case 2",
+        "complexity_level": "medium",
+        "complexity_score": 6.0,
+        "input_data": {
+          "level": 2,
+          "score": 100,
+          "moves_left": 9,
+          "board_state": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "execution_steps": [
+          "Initialize test case 2",
+          "Execute player actions",
+          "Validate results",
+          "Clean up"
+        ],
+        "expected_results": {
+          "outcome": "SUCCESS",
+          "validations": [
+            "Game state correct",
+            "Score updated"
+          ]
+        },
+        "scenario_type": "positive",
+        "tags": [
+          "fallback",
+          "puzzle game"
+        ],
+        "generated_by": "fallback",
+        "timestamp": "2025-09-29T05:19:07.317204"
+      },
+      {
+        "id": "fallback_003",
+        "description": "Fallback puzzle game test case 3",
+        "complexity_level": "medium",
+        "complexity_score": 7.0,
+        "input_data": {
+          "level": 3,
+          "score": 200,
+          "moves_left": 8,
+          "board_state": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "execution_steps": [
+          "Initialize test case 3",
+          "Execute player actions",
+          "Validate results",
+          "Clean up"
+        ],
+        "expected_results": {
+          "outcome": "SUCCESS",
+          "validations": [
+            "Game state correct",
+            "Score updated"
+          ]
+        },
+        "scenario_type": "positive",
+        "tags": [
+          "fallback",
+          "puzzle game"
+        ],
+        "generated_by": "fallback",
+        "timestamp": "2025-09-29T05:19:07.317204"
+      }
+    ],
+    "test_cases_count": 3,
+    "execution_results": [
+      [
+        {
+          "output": {
+            "action_result": "",
+            "score": 0,
+            "new_board_state": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ]
+          },
+          "expected": {}
+        },
+        {
+          "screenshot": "artifacts/simulation_test_case_0_20250929051913.png",
+          "dom_snapshot": "artifacts/simulation_test_case_0_20250929051913.html",
+          "performance_data": "artifacts/simulation_test_case_0_20250929051913_metrics.json",
+          "test_type": "simulation"
+        }
+      ],
+      [
+        {
+          "output": {
+            "action_result": "",
+            "score": 100,
+            "new_board_state": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ]
+          },
+          "expected": {}
+        },
+        {
+          "screenshot": "artifacts/simulation_test_case_0_20250929051920.png",
+          "dom_snapshot": "artifacts/simulation_test_case_0_20250929051920.html",
+          "performance_data": "artifacts/simulation_test_case_0_20250929051920_metrics.json",
+          "test_type": "simulation"
+        }
+      ],
+      [
+        {
+          "output": {
+            "action_result": "",
+            "score": 200,
+            "new_board_state": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ]
+          },
+          "expected": {}
+        },
+        {
+          "screenshot": "artifacts/simulation_test_case_0_20250929051927.png",
+          "dom_snapshot": "artifacts/simulation_test_case_0_20250929051927.html",
+          "performance_data": "artifacts/simulation_test_case_0_20250929051927_metrics.json",
+          "test_type": "simulation"
+        }
+      ]
+    ],
+    "analysis": {
+      "status": "failed",
+      "error": "'ProductionAnalyzerAgent' object has no attribute 'analyze_results'"
+    },
+    "ranking": {
+      "status": "failed",
+      "error": "'ProductionRankerAgent' object has no attribute 'rank_test_cases'"
+    }
+  },
+  "performance": {
+    "planning_time": 62.973761,
+    "execution_time": 21.089573,
+    "analysis_time": 0.0,
+    "ranking_time": 0.0,
+    "total_time": 84.063334
+  },
+  "status": "completed"
+}

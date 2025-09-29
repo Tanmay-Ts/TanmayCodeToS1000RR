@@ -1,0 +1,26 @@
+{
+  "url": "data:text/html,<html><body><div id='loading'>Initializing Test Environment...</div></body></html>",
+  "timestamp": "2025-09-28T23:43:03.599Z",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "gameState": {
+    "board": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "score": 0,
+    "target": 15,
+    "status": "",
+    "steps": [],
+    "testIndex": 0,
+    "completedAt": "2025-09-28T23:43:01.725Z"
+  }
+}

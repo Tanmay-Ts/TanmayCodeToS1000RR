@@ -1,0 +1,1871 @@
+{
+  "test_run_id": "test_20250929_065750",
+  "workflow_start": "2025-09-29T06:57:50.234089",
+  "config": {
+    "test_run_id": "test_20250929_065750",
+    "game_url": "https://play.ezygamers.com/",
+    "num_candidates": 20,
+    "num_execute": 10,
+    "test_types": [
+      "basic_gameplay",
+      "edge_cases",
+      "performance",
+      "ui_validation"
+    ]
+  },
+  "phases": {
+    "planning": {
+      "status": "success",
+      "phase_duration": 0.0,
+      "test_cases": [
+        {
+          "id": "TC_001",
+          "title": "Basic Game Load Test #1",
+          "description": "Verify game loads properly and displays main elements (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 5.0,
+          "steps": [
+            {
+              "action": "navigate",
+              "target": "https://play.ezygamers.com/",
+              "description": "Navigate to game"
+            },
+            {
+              "action": "wait",
+              "target": ".game-container",
+              "timeout": 5000,
+              "description": "Wait for game to load"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture initial state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_002",
+          "title": "New Game Initialization #2",
+          "description": "Test starting a new game (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 6.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": "button:has-text('New Game')",
+              "description": "Click New Game"
+            },
+            {
+              "action": "wait",
+              "target": ".game-board",
+              "timeout": 3000,
+              "description": "Wait for board"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture game board"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_003",
+          "title": "Number Selection Test #3",
+          "description": "Test basic number selection mechanics (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 7.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": ".number-cell:first-child",
+              "description": "Select first number"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture selection state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_004",
+          "title": "Boundary Value Test #4",
+          "description": "Test game behavior with boundary values (Fallback generated)",
+          "category": "edge_cases",
+          "priority": "medium",
+          "complexity_score": 8.0,
+          "steps": [
+            {
+              "action": "custom",
+              "description": "Test maximum score scenarios"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture boundary state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_005",
+          "title": "Invalid Selection Test #5",
+          "description": "Test invalid number combinations (Fallback generated)",
+          "category": "edge_cases",
+          "priority": "medium",
+          "complexity_score": 9.0,
+          "steps": [
+            {
+              "action": "drag",
+              "source": ".invalid-cell",
+              "target": ".another-cell",
+              "description": "Attempt invalid drag"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture error state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_006",
+          "title": "Load Performance Test #6",
+          "description": "Measure game load performance (Fallback generated)",
+          "category": "performance",
+          "priority": "medium",
+          "complexity_score": 5.0,
+          "steps": [
+            {
+              "action": "performance_start",
+              "description": "Start performance monitoring"
+            },
+            {
+              "action": "navigate",
+              "target": "https://play.ezygamers.com/",
+              "description": "Load game"
+            },
+            {
+              "action": "performance_end",
+              "description": "End performance monitoring"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_007",
+          "title": "Settings Menu Test #7",
+          "description": "Test settings menu functionality (Fallback generated)",
+          "category": "ui_validation",
+          "priority": "medium",
+          "complexity_score": 6.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": "button:has-text('Settings')",
+              "description": "Open settings"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture settings menu"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_008",
+          "title": "Basic Game Load Test #8",
+          "description": "Verify game loads properly and displays main elements (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 7.0,
+          "steps": [
+            {
+              "action": "navigate",
+              "target": "https://play.ezygamers.com/",
+              "description": "Navigate to game"
+            },
+            {
+              "action": "wait",
+              "target": ".game-container",
+              "timeout": 5000,
+              "description": "Wait for game to load"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture initial state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_009",
+          "title": "New Game Initialization #9",
+          "description": "Test starting a new game (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 8.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": "button:has-text('New Game')",
+              "description": "Click New Game"
+            },
+            {
+              "action": "wait",
+              "target": ".game-board",
+              "timeout": 3000,
+              "description": "Wait for board"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture game board"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_010",
+          "title": "Number Selection Test #10",
+          "description": "Test basic number selection mechanics (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 9.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": ".number-cell:first-child",
+              "description": "Select first number"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture selection state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_011",
+          "title": "Boundary Value Test #11",
+          "description": "Test game behavior with boundary values (Fallback generated)",
+          "category": "edge_cases",
+          "priority": "low",
+          "complexity_score": 5.0,
+          "steps": [
+            {
+              "action": "custom",
+              "description": "Test maximum score scenarios"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture boundary state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_012",
+          "title": "Invalid Selection Test #12",
+          "description": "Test invalid number combinations (Fallback generated)",
+          "category": "edge_cases",
+          "priority": "low",
+          "complexity_score": 6.0,
+          "steps": [
+            {
+              "action": "drag",
+              "source": ".invalid-cell",
+              "target": ".another-cell",
+              "description": "Attempt invalid drag"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture error state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_013",
+          "title": "Load Performance Test #13",
+          "description": "Measure game load performance (Fallback generated)",
+          "category": "performance",
+          "priority": "low",
+          "complexity_score": 7.0,
+          "steps": [
+            {
+              "action": "performance_start",
+              "description": "Start performance monitoring"
+            },
+            {
+              "action": "navigate",
+              "target": "https://play.ezygamers.com/",
+              "description": "Load game"
+            },
+            {
+              "action": "performance_end",
+              "description": "End performance monitoring"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_014",
+          "title": "Settings Menu Test #14",
+          "description": "Test settings menu functionality (Fallback generated)",
+          "category": "ui_validation",
+          "priority": "low",
+          "complexity_score": 8.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": "button:has-text('Settings')",
+              "description": "Open settings"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture settings menu"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_015",
+          "title": "Basic Game Load Test #15",
+          "description": "Verify game loads properly and displays main elements (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "low",
+          "complexity_score": 9.0,
+          "steps": [
+            {
+              "action": "navigate",
+              "target": "https://play.ezygamers.com/",
+              "description": "Navigate to game"
+            },
+            {
+              "action": "wait",
+              "target": ".game-container",
+              "timeout": 5000,
+              "description": "Wait for game to load"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture initial state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_016",
+          "title": "New Game Initialization #16",
+          "description": "Test starting a new game (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "low",
+          "complexity_score": 5.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": "button:has-text('New Game')",
+              "description": "Click New Game"
+            },
+            {
+              "action": "wait",
+              "target": ".game-board",
+              "timeout": 3000,
+              "description": "Wait for board"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture game board"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_017",
+          "title": "Number Selection Test #17",
+          "description": "Test basic number selection mechanics (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "low",
+          "complexity_score": 6.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": ".number-cell:first-child",
+              "description": "Select first number"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture selection state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_018",
+          "title": "Boundary Value Test #18",
+          "description": "Test game behavior with boundary values (Fallback generated)",
+          "category": "edge_cases",
+          "priority": "low",
+          "complexity_score": 7.0,
+          "steps": [
+            {
+              "action": "custom",
+              "description": "Test maximum score scenarios"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture boundary state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_019",
+          "title": "Invalid Selection Test #19",
+          "description": "Test invalid number combinations (Fallback generated)",
+          "category": "edge_cases",
+          "priority": "low",
+          "complexity_score": 8.0,
+          "steps": [
+            {
+              "action": "drag",
+              "source": ".invalid-cell",
+              "target": ".another-cell",
+              "description": "Attempt invalid drag"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture error state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_020",
+          "title": "Load Performance Test #20",
+          "description": "Measure game load performance (Fallback generated)",
+          "category": "performance",
+          "priority": "low",
+          "complexity_score": 9.0,
+          "steps": [
+            {
+              "action": "performance_start",
+              "description": "Start performance monitoring"
+            },
+            {
+              "action": "navigate",
+              "target": "https://play.ezygamers.com/",
+              "description": "Load game"
+            },
+            {
+              "action": "performance_end",
+              "description": "End performance monitoring"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        }
+      ],
+      "test_cases_generated": 20,
+      "requirements": {
+        "game_url": "https://play.ezygamers.com/",
+        "num_candidates": 20,
+        "test_types": [
+          "basic_gameplay",
+          "edge_cases",
+          "performance",
+          "ui_validation"
+        ]
+      },
+      "planner_info": {
+        "agent_type": "PlannerAgent",
+        "version": "1.0.0",
+        "capabilities": [
+          "test_case_generation",
+          "langchain_integration"
+        ],
+        "langchain_available": true,
+        "llm_initialized": false
+      }
+    },
+    "ranking": {
+      "status": "success",
+      "phase_duration": 0.0,
+      "selected_test_cases": [
+        {
+          "id": "TC_001",
+          "title": "Basic Game Load Test #1",
+          "description": "Verify game loads properly and displays main elements (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 5.0,
+          "steps": [
+            {
+              "action": "navigate",
+              "target": "https://play.ezygamers.com/",
+              "description": "Navigate to game"
+            },
+            {
+              "action": "wait",
+              "target": ".game-container",
+              "timeout": 5000,
+              "description": "Wait for game to load"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture initial state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_002",
+          "title": "New Game Initialization #2",
+          "description": "Test starting a new game (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 6.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": "button:has-text('New Game')",
+              "description": "Click New Game"
+            },
+            {
+              "action": "wait",
+              "target": ".game-board",
+              "timeout": 3000,
+              "description": "Wait for board"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture game board"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_003",
+          "title": "Number Selection Test #3",
+          "description": "Test basic number selection mechanics (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 7.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": ".number-cell:first-child",
+              "description": "Select first number"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture selection state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_004",
+          "title": "Boundary Value Test #4",
+          "description": "Test game behavior with boundary values (Fallback generated)",
+          "category": "edge_cases",
+          "priority": "medium",
+          "complexity_score": 8.0,
+          "steps": [
+            {
+              "action": "custom",
+              "description": "Test maximum score scenarios"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture boundary state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_005",
+          "title": "Invalid Selection Test #5",
+          "description": "Test invalid number combinations (Fallback generated)",
+          "category": "edge_cases",
+          "priority": "medium",
+          "complexity_score": 9.0,
+          "steps": [
+            {
+              "action": "drag",
+              "source": ".invalid-cell",
+              "target": ".another-cell",
+              "description": "Attempt invalid drag"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture error state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_006",
+          "title": "Load Performance Test #6",
+          "description": "Measure game load performance (Fallback generated)",
+          "category": "performance",
+          "priority": "medium",
+          "complexity_score": 5.0,
+          "steps": [
+            {
+              "action": "performance_start",
+              "description": "Start performance monitoring"
+            },
+            {
+              "action": "navigate",
+              "target": "https://play.ezygamers.com/",
+              "description": "Load game"
+            },
+            {
+              "action": "performance_end",
+              "description": "End performance monitoring"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_007",
+          "title": "Settings Menu Test #7",
+          "description": "Test settings menu functionality (Fallback generated)",
+          "category": "ui_validation",
+          "priority": "medium",
+          "complexity_score": 6.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": "button:has-text('Settings')",
+              "description": "Open settings"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture settings menu"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_008",
+          "title": "Basic Game Load Test #8",
+          "description": "Verify game loads properly and displays main elements (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 7.0,
+          "steps": [
+            {
+              "action": "navigate",
+              "target": "https://play.ezygamers.com/",
+              "description": "Navigate to game"
+            },
+            {
+              "action": "wait",
+              "target": ".game-container",
+              "timeout": 5000,
+              "description": "Wait for game to load"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture initial state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_009",
+          "title": "New Game Initialization #9",
+          "description": "Test starting a new game (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 8.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": "button:has-text('New Game')",
+              "description": "Click New Game"
+            },
+            {
+              "action": "wait",
+              "target": ".game-board",
+              "timeout": 3000,
+              "description": "Wait for board"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture game board"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "TC_010",
+          "title": "Number Selection Test #10",
+          "description": "Test basic number selection mechanics (Fallback generated)",
+          "category": "basic_gameplay",
+          "priority": "medium",
+          "complexity_score": 9.0,
+          "steps": [
+            {
+              "action": "click",
+              "target": ".number-cell:first-child",
+              "description": "Select first number"
+            },
+            {
+              "action": "screenshot",
+              "description": "Capture selection state"
+            }
+          ],
+          "expected_results": {
+            "status": "success",
+            "validations": [
+              "Basic functionality works"
+            ]
+          },
+          "validation_points": [
+            "No console errors",
+            "UI responds appropriately",
+            "Performance within acceptable range"
+          ],
+          "artifacts_to_capture": [
+            "screenshot",
+            "console_logs"
+          ],
+          "metadata": {
+            "generated_by": "fallback_planner",
+            "timestamp": "2025-09-29T06:57:50.234089",
+            "version": "1.0.0"
+          }
+        }
+      ],
+      "rejected_test_cases": [
+        {
+          "id": "rejected_0",
+          "title": "Test 0"
+        },
+        {
+          "id": "rejected_1",
+          "title": "Test 1"
+        },
+        {
+          "id": "rejected_2",
+          "title": "Test 2"
+        },
+        {
+          "id": "rejected_3",
+          "title": "Test 3"
+        },
+        {
+          "id": "rejected_4",
+          "title": "Test 4"
+        },
+        {
+          "id": "rejected_5",
+          "title": "Test 5"
+        },
+        {
+          "id": "rejected_6",
+          "title": "Test 6"
+        },
+        {
+          "id": "rejected_7",
+          "title": "Test 7"
+        },
+        {
+          "id": "rejected_8",
+          "title": "Test 8"
+        },
+        {
+          "id": "rejected_9",
+          "title": "Test 9"
+        }
+      ],
+      "ranking_details": {
+        "total_candidates": 20,
+        "selected_count": 10,
+        "rejected_count": 10,
+        "selected_test_cases": [
+          {
+            "id": "TC_001",
+            "title": "Basic Game Load Test #1",
+            "description": "Verify game loads properly and displays main elements (Fallback generated)",
+            "category": "basic_gameplay",
+            "priority": "medium",
+            "complexity_score": 5.0,
+            "steps": [
+              {
+                "action": "navigate",
+                "target": "https://play.ezygamers.com/",
+                "description": "Navigate to game"
+              },
+              {
+                "action": "wait",
+                "target": ".game-container",
+                "timeout": 5000,
+                "description": "Wait for game to load"
+              },
+              {
+                "action": "screenshot",
+                "description": "Capture initial state"
+              }
+            ],
+            "expected_results": {
+              "status": "success",
+              "validations": [
+                "Basic functionality works"
+              ]
+            },
+            "validation_points": [
+              "No console errors",
+              "UI responds appropriately",
+              "Performance within acceptable range"
+            ],
+            "artifacts_to_capture": [
+              "screenshot",
+              "console_logs"
+            ],
+            "metadata": {
+              "generated_by": "fallback_planner",
+              "timestamp": "2025-09-29T06:57:50.234089",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "TC_002",
+            "title": "New Game Initialization #2",
+            "description": "Test starting a new game (Fallback generated)",
+            "category": "basic_gameplay",
+            "priority": "medium",
+            "complexity_score": 6.0,
+            "steps": [
+              {
+                "action": "click",
+                "target": "button:has-text('New Game')",
+                "description": "Click New Game"
+              },
+              {
+                "action": "wait",
+                "target": ".game-board",
+                "timeout": 3000,
+                "description": "Wait for board"
+              },
+              {
+                "action": "screenshot",
+                "description": "Capture game board"
+              }
+            ],
+            "expected_results": {
+              "status": "success",
+              "validations": [
+                "Basic functionality works"
+              ]
+            },
+            "validation_points": [
+              "No console errors",
+              "UI responds appropriately",
+              "Performance within acceptable range"
+            ],
+            "artifacts_to_capture": [
+              "screenshot",
+              "console_logs"
+            ],
+            "metadata": {
+              "generated_by": "fallback_planner",
+              "timestamp": "2025-09-29T06:57:50.234089",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "TC_003",
+            "title": "Number Selection Test #3",
+            "description": "Test basic number selection mechanics (Fallback generated)",
+            "category": "basic_gameplay",
+            "priority": "medium",
+            "complexity_score": 7.0,
+            "steps": [
+              {
+                "action": "click",
+                "target": ".number-cell:first-child",
+                "description": "Select first number"
+              },
+              {
+                "action": "screenshot",
+                "description": "Capture selection state"
+              }
+            ],
+            "expected_results": {
+              "status": "success",
+              "validations": [
+                "Basic functionality works"
+              ]
+            },
+            "validation_points": [
+              "No console errors",
+              "UI responds appropriately",
+              "Performance within acceptable range"
+            ],
+            "artifacts_to_capture": [
+              "screenshot",
+              "console_logs"
+            ],
+            "metadata": {
+              "generated_by": "fallback_planner",
+              "timestamp": "2025-09-29T06:57:50.234089",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "TC_004",
+            "title": "Boundary Value Test #4",
+            "description": "Test game behavior with boundary values (Fallback generated)",
+            "category": "edge_cases",
+            "priority": "medium",
+            "complexity_score": 8.0,
+            "steps": [
+              {
+                "action": "custom",
+                "description": "Test maximum score scenarios"
+              },
+              {
+                "action": "screenshot",
+                "description": "Capture boundary state"
+              }
+            ],
+            "expected_results": {
+              "status": "success",
+              "validations": [
+                "Basic functionality works"
+              ]
+            },
+            "validation_points": [
+              "No console errors",
+              "UI responds appropriately",
+              "Performance within acceptable range"
+            ],
+            "artifacts_to_capture": [
+              "screenshot",
+              "console_logs"
+            ],
+            "metadata": {
+              "generated_by": "fallback_planner",
+              "timestamp": "2025-09-29T06:57:50.234089",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "TC_005",
+            "title": "Invalid Selection Test #5",
+            "description": "Test invalid number combinations (Fallback generated)",
+            "category": "edge_cases",
+            "priority": "medium",
+            "complexity_score": 9.0,
+            "steps": [
+              {
+                "action": "drag",
+                "source": ".invalid-cell",
+                "target": ".another-cell",
+                "description": "Attempt invalid drag"
+              },
+              {
+                "action": "screenshot",
+                "description": "Capture error state"
+              }
+            ],
+            "expected_results": {
+              "status": "success",
+              "validations": [
+                "Basic functionality works"
+              ]
+            },
+            "validation_points": [
+              "No console errors",
+              "UI responds appropriately",
+              "Performance within acceptable range"
+            ],
+            "artifacts_to_capture": [
+              "screenshot",
+              "console_logs"
+            ],
+            "metadata": {
+              "generated_by": "fallback_planner",
+              "timestamp": "2025-09-29T06:57:50.234089",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "TC_006",
+            "title": "Load Performance Test #6",
+            "description": "Measure game load performance (Fallback generated)",
+            "category": "performance",
+            "priority": "medium",
+            "complexity_score": 5.0,
+            "steps": [
+              {
+                "action": "performance_start",
+                "description": "Start performance monitoring"
+              },
+              {
+                "action": "navigate",
+                "target": "https://play.ezygamers.com/",
+                "description": "Load game"
+              },
+              {
+                "action": "performance_end",
+                "description": "End performance monitoring"
+              }
+            ],
+            "expected_results": {
+              "status": "success",
+              "validations": [
+                "Basic functionality works"
+              ]
+            },
+            "validation_points": [
+              "No console errors",
+              "UI responds appropriately",
+              "Performance within acceptable range"
+            ],
+            "artifacts_to_capture": [
+              "screenshot",
+              "console_logs"
+            ],
+            "metadata": {
+              "generated_by": "fallback_planner",
+              "timestamp": "2025-09-29T06:57:50.234089",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "TC_007",
+            "title": "Settings Menu Test #7",
+            "description": "Test settings menu functionality (Fallback generated)",
+            "category": "ui_validation",
+            "priority": "medium",
+            "complexity_score": 6.0,
+            "steps": [
+              {
+                "action": "click",
+                "target": "button:has-text('Settings')",
+                "description": "Open settings"
+              },
+              {
+                "action": "screenshot",
+                "description": "Capture settings menu"
+              }
+            ],
+            "expected_results": {
+              "status": "success",
+              "validations": [
+                "Basic functionality works"
+              ]
+            },
+            "validation_points": [
+              "No console errors",
+              "UI responds appropriately",
+              "Performance within acceptable range"
+            ],
+            "artifacts_to_capture": [
+              "screenshot",
+              "console_logs"
+            ],
+            "metadata": {
+              "generated_by": "fallback_planner",
+              "timestamp": "2025-09-29T06:57:50.234089",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "TC_008",
+            "title": "Basic Game Load Test #8",
+            "description": "Verify game loads properly and displays main elements (Fallback generated)",
+            "category": "basic_gameplay",
+            "priority": "medium",
+            "complexity_score": 7.0,
+            "steps": [
+              {
+                "action": "navigate",
+                "target": "https://play.ezygamers.com/",
+                "description": "Navigate to game"
+              },
+              {
+                "action": "wait",
+                "target": ".game-container",
+                "timeout": 5000,
+                "description": "Wait for game to load"
+              },
+              {
+                "action": "screenshot",
+                "description": "Capture initial state"
+              }
+            ],
+            "expected_results": {
+              "status": "success",
+              "validations": [
+                "Basic functionality works"
+              ]
+            },
+            "validation_points": [
+              "No console errors",
+              "UI responds appropriately",
+              "Performance within acceptable range"
+            ],
+            "artifacts_to_capture": [
+              "screenshot",
+              "console_logs"
+            ],
+            "metadata": {
+              "generated_by": "fallback_planner",
+              "timestamp": "2025-09-29T06:57:50.234089",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "TC_009",
+            "title": "New Game Initialization #9",
+            "description": "Test starting a new game (Fallback generated)",
+            "category": "basic_gameplay",
+            "priority": "medium",
+            "complexity_score": 8.0,
+            "steps": [
+              {
+                "action": "click",
+                "target": "button:has-text('New Game')",
+                "description": "Click New Game"
+              },
+              {
+                "action": "wait",
+                "target": ".game-board",
+                "timeout": 3000,
+                "description": "Wait for board"
+              },
+              {
+                "action": "screenshot",
+                "description": "Capture game board"
+              }
+            ],
+            "expected_results": {
+              "status": "success",
+              "validations": [
+                "Basic functionality works"
+              ]
+            },
+            "validation_points": [
+              "No console errors",
+              "UI responds appropriately",
+              "Performance within acceptable range"
+            ],
+            "artifacts_to_capture": [
+              "screenshot",
+              "console_logs"
+            ],
+            "metadata": {
+              "generated_by": "fallback_planner",
+              "timestamp": "2025-09-29T06:57:50.234089",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "TC_010",
+            "title": "Number Selection Test #10",
+            "description": "Test basic number selection mechanics (Fallback generated)",
+            "category": "basic_gameplay",
+            "priority": "medium",
+            "complexity_score": 9.0,
+            "steps": [
+              {
+                "action": "click",
+                "target": ".number-cell:first-child",
+                "description": "Select first number"
+              },
+              {
+                "action": "screenshot",
+                "description": "Capture selection state"
+              }
+            ],
+            "expected_results": {
+              "status": "success",
+              "validations": [
+                "Basic functionality works"
+              ]
+            },
+            "validation_points": [
+              "No console errors",
+              "UI responds appropriately",
+              "Performance within acceptable range"
+            ],
+            "artifacts_to_capture": [
+              "screenshot",
+              "console_logs"
+            ],
+            "metadata": {
+              "generated_by": "fallback_planner",
+              "timestamp": "2025-09-29T06:57:50.234089",
+              "version": "1.0.0"
+            }
+          }
+        ],
+        "rejected_test_cases": [
+          {
+            "id": "rejected_0",
+            "title": "Test 0"
+          },
+          {
+            "id": "rejected_1",
+            "title": "Test 1"
+          },
+          {
+            "id": "rejected_2",
+            "title": "Test 2"
+          },
+          {
+            "id": "rejected_3",
+            "title": "Test 3"
+          },
+          {
+            "id": "rejected_4",
+            "title": "Test 4"
+          },
+          {
+            "id": "rejected_5",
+            "title": "Test 5"
+          },
+          {
+            "id": "rejected_6",
+            "title": "Test 6"
+          },
+          {
+            "id": "rejected_7",
+            "title": "Test 7"
+          },
+          {
+            "id": "rejected_8",
+            "title": "Test 8"
+          },
+          {
+            "id": "rejected_9",
+            "title": "Test 9"
+          }
+        ]
+      },
+      "ranker_info": {
+        "agent_type": "RankerAgent",
+        "version": "1.0.0",
+        "capabilities": [
+          "test_case_ranking"
+        ]
+      }
+    },
+    "execution": {
+      "status": "failed",
+      "phase_duration": 0.010223,
+      "error": "",
+      "test_results": [],
+      "execution_statistics": {
+        "total_executed": 0,
+        "passed": 0,
+        "failed": 0,
+        "errors": 0
+      }
+    },
+    "analysis": {
+      "status": "failed",
+      "phase_duration": 0.0,
+      "error": "division by zero",
+      "analysis_result": {}
+    }
+  },
+  "final_verdict": "POOR",
+  "artifacts_location": "artifacts/test_20250929_065750",
+  "reports_generated": [],
+  "final_report": {
+    "overall_verdict": "POOR",
+    "verdict_reason": "Low success rate indicating significant problems",
+    "executive_summary": {
+      "test_cases_generated": 20,
+      "test_cases_executed": 0,
+      "overall_success_rate": 0,
+      "total_workflow_time": 0.010223
+    },
+    "key_findings": [
+      "Successfully generated 20 test cases using LangChain",
+      "Test execution: 0/0 tests passed"
+    ],
+    "recommendations": [],
+    "reproducibility_stats": {
+      "workflow_reproducible": false,
+      "test_artifacts_captured": 0,
+      "cross_validation_performed": false
+    },
+    "next_steps": [
+      "Investigate failing tests immediately",
+      "Review test environment setup",
+      "Consider reducing test scope until issues are resolved"
+    ],
+    "report_metadata": {
+      "generated_at": "2025-09-29T06:57:50.244312",
+      "workflow_version": "1.0.0",
+      "agents_used": [
+        "PlannerAgent",
+        "RankerAgent",
+        "ExecutorAgent",
+        "AnalyzerAgent"
+      ]
+    }
+  },
+  "workflow_end": "2025-09-29T06:57:50.244312",
+  "status": "completed"
+}
